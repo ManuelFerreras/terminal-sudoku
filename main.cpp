@@ -46,7 +46,7 @@ int main() {
         std::cout << "Enter value (1-9): ";
         value = getNumber();
 
-        if (isValid(row - 1, column - 1, value)) {
+        if (isValid(row - 1, column - 1, value) && gameBoard[row - 1][column - 1].canModify) {
             gameBoard[row - 1][column - 1].value = value;
             if (playerOneTurn) {
                 playerOneScore++;
